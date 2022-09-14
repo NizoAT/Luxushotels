@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:luxushotels/widgets/myappbar.dart';
+import 'package:luxushotels/widgets/searchsection.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-  
 
   final String title;
 
@@ -12,26 +12,22 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
-  const d_green = const Color(0xFF54D3C2);
+  static const Color d_green = const Color(0xFF54D3C2);
 
-      @override
-      Widget build(BuildContext context){
-
-        return Scaffold(
-
-          appBar: const MyAppBar(),
-
-          body: SafeArea(
-
-            child: Container(),
-
-            ),
-
-            
-            
-
-        );
-
-      }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: const MyAppBar(),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SearchSection(),
+              //HotelSection(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
