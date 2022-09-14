@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:luxushotels/widgets/myappbar.dart';
 import 'package:luxushotels/widgets/searchsection.dart';
+import 'calendar_page.dart';
+import 'package:luxushotels/ressources/hotels_json.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -23,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: [
               SearchSection(),
-              //HotelSection(),
+              HotelSection(),
             ],
           ),
         ),

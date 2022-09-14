@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:luxushotels/pages/calendar_page.dart';
 
 class SearchSection extends StatelessWidget {
   const SearchSection({super.key});

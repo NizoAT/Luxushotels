@@ -16,7 +16,9 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: Colors.grey[800],
           size: 20,
         ),
-        onPressed: null,
+        onPressed: () {
+          Navigator.pop(context);
+        },
       ),
       centerTitle: true,
       title: Text(
