@@ -7,9 +7,9 @@ import 'package:luxushotels/pages/DetailHotel.dart';
 const Color d_green = Color(0xFF54D3C2);
 
 class HotelSection extends StatelessWidget {
-  const HotelSection({super.key, required this.hotelData});
+  const HotelSection({super.key});
 
-  final HotelRecipe hotelData;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,8 @@ class HotelSection extends StatelessWidget {
               ],
             ),
           ),
-          ListView.builder(
+          Expanded(
+            child: ListView.builder(
               itemCount: HotelRecipe.sample.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
@@ -72,7 +73,9 @@ class HotelSection extends StatelessWidget {
                     ),
                   
                 );
-              }),
+              }
+              ),
+              ),
           
         ],
       ),
