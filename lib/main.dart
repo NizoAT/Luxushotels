@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    const d_green = const Color(0xFF54D3C2);
+    const d_green =  Color(0xFF54D3C2);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hotels Booking',

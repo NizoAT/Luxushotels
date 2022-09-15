@@ -5,10 +5,11 @@ import 'package:luxushotels/widgets/myappbar.dart';
  DateTime kNow = DateTime.now();
   DateTime kFirstDay = DateTime(kNow.year, kNow.month - 3, kNow.day);
   DateTime kLastDay = DateTime(kNow.year, kNow.month + 3, kNow.day);
+  const d_green =  Color(0xFF54D3C2);
 
 class CalendarPage extends StatelessWidget {
 
-  static const d_green = const Color(0xFF54D3C2);
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,7 +104,7 @@ class CalendarRange extends StatefulWidget {
 }
 
 class _CalendarRangeState extends State<CalendarRange> {
-  static const Color d_green = Color(0xFF54D3C2);
+  
 
   CalendarFormat _calendarFormat = CalendarFormat.month;
   RangeSelectionMode _rangeSelectionMode = RangeSelectionMode
@@ -199,7 +200,7 @@ class _CalendarRangeState extends State<CalendarRange> {
 }
 
 class ValidateBookingSection extends StatelessWidget {
-  static const Color d_green = const Color(0xFF54D3C2);
+  
   final selectedRadio = 1;
   @override
   Widget build(BuildContext context) {

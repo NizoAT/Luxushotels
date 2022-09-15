@@ -10,17 +10,15 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: IconButton(
+     leading: IconButton(
         icon: Icon(
           Icons.arrow_back,
           color: Colors.grey[800],
           size: 20,
         ),
-        onPressed: () {
-          Navigator.pop(context);
-        },
+        onPressed: null,
       ),
-      centerTitle: true,
+      
       title: Text(
         'Explore',
         style: GoogleFonts.nunito(
@@ -48,6 +46,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ],
       backgroundColor: Colors.white,
+      centerTitle: true,
     );
   }
 }

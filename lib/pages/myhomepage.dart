@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:luxushotels/widgets/myappbar.dart';
 import 'package:luxushotels/widgets/searchsection.dart';
-import 'calendar_page.dart';
-import 'package:luxushotels/ressources/hotels_json.dart';
+import 'package:table_calendar/table_calendar.dart';
+import 'package:luxushotels/ressources/HotelSection.dart';
+import 'package:luxushotels/widgets/bottomnavigationbar.dart';
+ const Color d_green =  Color(0xFF54D3C2);
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -14,22 +16,25 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static const Color d_green = const Color(0xFF54D3C2);
+ 
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Hotels Booking',
+      home: Scaffold(
       appBar: const MyAppBar(),
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Column(
-            children: [
+            children: const [
               SearchSection(),
               HotelSection(),
             ],
           ),
-        ),
       ),
+      bottomNavigationBar: const BottomNavBarSection(),
+    )
     );
   }
 }

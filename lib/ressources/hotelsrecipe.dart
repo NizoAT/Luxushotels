@@ -1,124 +1,125 @@
-// class HotelRecipes {
-  /*
+class HotelRecipe {
+  
   String title;
   String place;
   String picture;
   double distance;
   int review;
-  String price;*/
+  String price;
 
-  //HotelRecipe(this.title, this.place, this.distance, this.review, this.picture, this.price);
-  final List HotelRecipe = [
+ HotelRecipe(this.title, this.place, this.distance, this.review, this.picture, this.price);
+ static List<HotelRecipe> sample = [
 
-     {
-      'title': 'Hôtel Grand Royl',
-      'place': 'Londres, wembley',
-      'distance': 2,
-      'review': 36,
-      'picture': 'assets/Grand Royl.jpg',
-      'price': '180',
-    },
+     HotelRecipe(
+       'Hôtel Grand Royl',
+      'Londres, wembley',
+       2,
+       36,
+       'assets/Grand Royl.jpg',
+       '180',
+    ),
     
-       {
-      'title': 'Queen Hotel',
-      'place': 'Londres, wembley',
-      'distance': 3,
-      'review': 13,
-      'picture': 'assets/Queen Hotel.jpg',
-      'price': '220'
-    },
+       HotelRecipe(
+       'Queen Hotel',
+       'Londres, wembley',
+       3,
+       13,
+      'assets/Queen Hotel.jpg',
+      '220'
+    ),
     
-       {
-      'title': 'Grand Mal Hotel',
-      'place': 'Londres, wembley',
-      'distance': 6,
-      'review': 88,
-      'picture': 'assets/Grand Mal.jpg',
-      'price': '400'
-    },
+      HotelRecipe( 
+      'Grand Mal Hotel',
+      'Londres, wembley',
+      6,
+      88,
+       'assets/Grand Mal.jpg',
+       '400'
+    ),
 
-    {
-      'title': 'Hilton',
-      'place': 'Londres, wembley',
-      'distance': 11,
-      'review': 33,
-      'picture': 'assets/Hilton.jpg',
-      'price':  '910'
-    },
+    HotelRecipe(
+       'Hilton',
+      'Londres, wembley',
+       11,
+      33,
+       'assets/Hilton.jpg',
+       '910'
+   ) ,
     
-      {
-      'title': 'HOTEL LAÏCO',
-      'place': 'ougadougou, ouaga 2000',
-      'distance': 4,
-      'review': 26,
-      'picture': 'assets/HOTEL LAÏCO.jpg',
-      'price': '340'
-    },
+      HotelRecipe(
+       'HOTEL LAÏCO',
+      'ougadougou, ouaga 2000',
+      4,
+       26,
+       'assets/HOTEL LAÏCO.jpg',
+       '340'
+    ),
 
-      {
-      'title': 'PALACE HOTEL',
-      'place': 'ougadougou, ouaga 2000',
-      'distance': 7,
-      'review': 12,
-      'picture': 'assets/PALACE HOTEL.jpg',
-      'price': '280'
-    },
+      HotelRecipe(
+       'PALACE HOTEL',
+     'ougadougou, ouaga 2000',
+       7,
+       12,
+       'assets/PALACE HOTEL.jpg',
+       '280'
+   ),
 
-     {
-      'title':  'SPLENDID HOTEL',
-      'place': 'Ouagadougou , Avenue Kwamé N’Krumah',
-      'distance': 9,
-      'review': 46,
-      'picture': 'assets/SPLENDID HOTEL.jpg',
-      'price': '480'
-    },
+     HotelRecipe(
+        'SPLENDID HOTEL',
+       'Ouagadougou , Avenue Kwamé N’Krumah',
+       9,
+       46,
+       'assets/SPLENDID HOTEL.jpg',
+      '480'
+    ),
 
 
-     {
-      'title': 'RELAX HOTEL',
-      'place': 'Ouagadougou , Av. de la Nation',
-      'distance': 12,
-      'review': 66,
-      'picture': 'assets/RELAX HOTEL.jpg',
-      'price': '80',
-    },
+     HotelRecipe(
+       'RELAX HOTEL',
+       'Ouagadougou , Av. de la Nation',
+       12,
+       66,
+       'assets/RELAX HOTEL.jpg',
+      '80',
+    ),
     
 
-     {
-      'title': 'Villabobo',
-      'place': 'Bobo Dioulasso , Av. de la Trevolution',
-      'distance': 1,
-      'review':  6,
-      'picture': 'assets/Villabobo.jpg',
-      'price': '190'
-    },
+     HotelRecipe(
+       'Villabobo',
+      'Bobo Dioulasso , Av. de la Trevolution',
+       1,
+       6,
+      'assets/Villabobo.jpg',
+       '190'
+    ),
 
-      {
-      'title': 'Collection München Bavaria',
-      'place': 'Munich, Gare centrale de Munich',
-      'distance': 0.16,
-      'review': 76,
-      'picture': 'assets/München Bavaria.jpg',
-      'price': '180'
-    },
+      HotelRecipe(
+       'Collection München Bavaria',
+       'Munich, Gare centrale de Munich',
+       0.16,
+       76,
+      'assets/München Bavaria.jpg',
+      '180'
+    ),
 
-     {
-      'title': 'Collection Marseille',
-      'place': 'Marseille, wembley',
-      'distance': 1.48,
-      'review': 45,
-      'picture': 'assets/Collection Marseille.jpg',
-      'price': '480'
-    },
-     {
-      'title': 'Marbella',
-      'place': 'Marbella, Alameda Park',
-      'distance': 2.28,
-      'review': 44,
-      'picture': 'assets/Marbella.jpg',
-      'price': '780'
-    },
-     /*
+     
+      HotelRecipe( 
+        'Collection Marseille',
+       'Marseille, wembley',
+       1.48,
+       45,
+       'assets/Collection Marseille.jpg',
+      '480'),
+    
+     HotelRecipe( 
+      'Marbella',
+      'Marbella, Alameda Park',
+       2.28,
+       44,
+       'assets/Marbella.jpg',
+      '780'
+   ),
+     
     HotelRecipe(
       'San Pedro de Alcántara',
       'Marbella Alameda Park',
@@ -151,7 +152,7 @@
       'assets/Cartagena Urban Royal.jpg',
       '430'
     ),
-    */
+    
 
   ];
-// }
+}

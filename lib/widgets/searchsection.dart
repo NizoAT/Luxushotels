@@ -8,14 +8,14 @@ class SearchSection extends StatelessWidget {
 static const Color d_green = Color(0xFF54D3C2);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return  Container(
       color: Colors.grey[800],
       padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
       child: Column(
         children: [
           Row(
             children: [
-              Expanded(
+                Expanded(
                 child: Container(
                   padding: const EdgeInsets.only(left: 5),
                   decoration: BoxDecoration(
@@ -31,7 +31,7 @@ static const Color d_green = Color(0xFF54D3C2);
                   ),
                   child: const TextField(
                     decoration: InputDecoration(
-                      hintText: "Ouagadougou",
+                      hintText: 'Ouagadougou',
                       contentPadding: EdgeInsets.all(10),
                       border: InputBorder.none,
                     ),
@@ -42,8 +42,8 @@ static const Color d_green = Color(0xFF54D3C2);
                 width: 10,
               ),
               Container(
-                height: 50,
-                width: 50,
+                height: 55,
+                width: 55,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -52,37 +52,34 @@ static const Color d_green = Color(0xFF54D3C2);
                       offset: const Offset(0, 4),
                     ),
                   ],
-                  borderRadius: const BorderRadius.all(Radius.circular(25)),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(25),
+                  ),
                 ),
-                
                 child: ElevatedButton(
-
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context){
+                        builder: (context) {
                           return CalendarPage();
-                        }
-                        ),
+                        },
+                      ),
                     );
                   },
-                  child:  Icon(
+                  child: const Icon(
                     Icons.search,
                     color: Colors.white,
-                    size: 26, 
+                    size: 24,
                   ),
-
                   style: ElevatedButton.styleFrom(
-                  foregroundColor: d_green, 
-                  padding: const EdgeInsets.all(10),
-                  shape: const CircleBorder(),
-                  shadowColor: Colors.white,
+                    padding: const EdgeInsets.all(10), 
+                    backgroundColor: d_green,
+                    shape: const CircleBorder(),
+                    shadowColor: Colors.white,
+                  ),
                 ),
-
-                ),
-                
-              ),
+              )
             ],
           ),
           Row(
@@ -90,7 +87,7 @@ static const Color d_green = Color(0xFF54D3C2);
             children: [
               Container(
                 margin: const EdgeInsets.all(10),
-                child:Column(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
