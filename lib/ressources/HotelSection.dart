@@ -7,6 +7,7 @@ import 'package:luxushotels/pages/DetailHotel.dart';
 const Color d_green = Color(0xFF54D3C2);
 
 class HotelSection extends StatelessWidget {
+  
   const HotelSection({super.key});
 
   
@@ -19,7 +20,7 @@ class HotelSection extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 70,
+            height: 30,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -52,8 +53,11 @@ class HotelSection extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
+          SizedBox(
+            height: 70,
+            width: MediaQuery.of(context).size.width,
             child: ListView.builder(
+              shrinkWrap: true,
               itemCount: HotelRecipe.sample.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(

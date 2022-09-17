@@ -12,7 +12,8 @@ class HotelCard extends StatelessWidget {
 
     @override
    Widget build(BuildContext context) {
-    return Container(
+    return Card(
+      child: Container(
       margin: EdgeInsets.all(10),
       height: 230,
       width: double.infinity,
@@ -176,6 +177,7 @@ class HotelCard extends StatelessWidget {
           ),
         ],
       ),
+    )
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:luxushotels/widgets/myappbar.dart';
 import 'package:luxushotels/widgets/searchsection.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -20,21 +21,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Hotels Booking',
-      home: Scaffold(
+    return Scaffold(
       appBar: const MyAppBar(),
-      body: SingleChildScrollView(
+      body:  SingleChildScrollView(
           child: Column(
+            mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.end,
             children: const [
-              SearchSection(),
-              HotelSection(),
+              SizedBox(
+                height: 25,
+                child: SearchSection(),
+              ),
+              /*
+              SizedBox(
+                height: 75,
+                child: HotelSection(),
+              )
+              */
             ],
+            
           ),
-      ),
+          ),
       bottomNavigationBar: const BottomNavBarSection(),
-    )
     );
   }
 }

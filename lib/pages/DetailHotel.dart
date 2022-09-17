@@ -25,7 +25,8 @@ class _HotelDetailState extends State<DetailHotel> {
                 title: Text(widget.hotelRecipe.title),
              ),
             body: SafeArea(
-                 child: Container(
+                 child: Expanded(
+                  child:  Container(
       margin: EdgeInsets.all(10),
       height: 230,
       width: double.infinity,
@@ -189,6 +190,7 @@ class _HotelDetailState extends State<DetailHotel> {
           ),
         ],
       ),
+    ),
     ),
                
             ),

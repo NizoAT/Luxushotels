@@ -3,19 +3,23 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:luxushotels/pages/calendar_page.dart';
 
+ const Color d_green = Color(0xFF54D3C2);
+
 class SearchSection extends StatelessWidget {
   const SearchSection({super.key});
-static const Color d_green = Color(0xFF54D3C2);
+
   @override
   Widget build(BuildContext context) {
     return  Container(
+      height: 50,
       color: Colors.grey[800],
       padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
       child: Column(
         children: [
           Row(
             children: [
-                Expanded(
+                Flexible(
+                  flex: 2,
                 child: Container(
                   padding: const EdgeInsets.only(left: 5),
                   decoration: BoxDecoration(
@@ -41,7 +45,9 @@ static const Color d_green = Color(0xFF54D3C2);
               const SizedBox(
                 width: 10,
               ),
-              Container(
+              Flexible(
+                flex: 1,
+                child: Container(
                 height: 55,
                 width: 55,
                 decoration: BoxDecoration(
@@ -58,15 +64,17 @@ static const Color d_green = Color(0xFF54D3C2);
                 ),
                 child: ElevatedButton(
                   onPressed: () {
+                    
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) {
-                          return CalendarPage();
-                        },
-                      ),
+                        builder: (context) => const CalendarPage()
+                        ),
+                        
+                      
                     );
                   },
+                  
                   child: const Icon(
                     Icons.search,
                     color: Colors.white,
@@ -79,28 +87,36 @@ static const Color d_green = Color(0xFF54D3C2);
                     shadowColor: Colors.white,
                   ),
                 ),
+              ),
               )
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
+              Flexible( 
+              flex: 2,
+              child: Container(
                 margin: const EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    Flexible(
+                      flex: 1,
+                      child:Text(
                       'Choisissez la date',
                       style: GoogleFonts.nunito(
                         color: Colors.grey,
                         fontSize: 15,
                       ),
                     ),
+                ),
 
                     const SizedBox(height: 8,),
 
-                    Text(
+                    Flexible(
+                      flex: 1,
+                      child:Text(
                       '12 Dec - 22 Dec',
                       style: GoogleFonts.nunito(
                         color: Colors.black,
@@ -108,36 +124,47 @@ static const Color d_green = Color(0xFF54D3C2);
                       ),
 
                     ),
+                ),
 
                   ],
                 ),
               ),
+              ),
 
-              Container(
+              Flexible( 
+                flex: 2,
+              child: Container(
                 margin: const EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    Flexible(
+                      flex: 1,
+                      child:Text(
                       'Nombre de chambres',
                       style: GoogleFonts.nunito(
                         color: Colors.grey,
                         fontSize: 15,
                       ),
                     ),
+                ),
 
                     const SizedBox(height: 8,),
 
-                    Text(
+                    Flexible(
+                      flex: 1,
+                      child: Text(
                       '1 Chambre - 2 Adultes',
                       style: GoogleFonts.nunito(
                         color: Colors.black,
-                        fontSize: 17,
+                        fontSize: 15,
                       )
+                    ),
                     ),
 
                   ],
                 ),
+              ),
               ),
             ],
           ),

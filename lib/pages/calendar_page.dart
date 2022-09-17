@@ -2,24 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:luxushotels/widgets/myappbar.dart';
 
- DateTime kNow = DateTime.now();
-  DateTime kFirstDay = DateTime(kNow.year, kNow.month - 3, kNow.day);
-  DateTime kLastDay = DateTime(kNow.year, kNow.month + 3, kNow.day);
-  const d_green =  Color(0xFF54D3C2);
+DateTime kNow = DateTime.now();
+DateTime kFirstDay = DateTime(kNow.year, kNow.month - 3, kNow.day);
+DateTime kLastDay = DateTime(kNow.year, kNow.month + 3, kNow.day);
+const d_green = Color(0xFF54D3C2);
 
 class CalendarPage extends StatelessWidget {
-
-  
+  const CalendarPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const MyAppBar(),
-      body: Column(
-        children: [
-          PeriodSection(),
-          CalendarRange(),
-          ValidateBookingSection(),
-        ],
+      body: Expanded(
+        child: Column(
+          children: [
+            PeriodSection(),
+            CalendarRange(),
+            ValidateBookingSection(),
+          ],
+        ),
       ),
     );
   }
@@ -104,8 +105,6 @@ class CalendarRange extends StatefulWidget {
 }
 
 class _CalendarRangeState extends State<CalendarRange> {
-  
-
   CalendarFormat _calendarFormat = CalendarFormat.month;
   RangeSelectionMode _rangeSelectionMode = RangeSelectionMode
       .toggledOn; // Can be toggled on/off by longpressing a date
@@ -200,7 +199,6 @@ class _CalendarRangeState extends State<CalendarRange> {
 }
 
 class ValidateBookingSection extends StatelessWidget {
-  
   final selectedRadio = 1;
   @override
   Widget build(BuildContext context) {
