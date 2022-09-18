@@ -23,25 +23,22 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const MyAppBar(),
-      body:  SingleChildScrollView(
+      body:  SizedBox.expand(
+        child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: const [
-              SizedBox(
-                height: 25,
-                child: SearchSection(),
-              ),
-              /*
-              SizedBox(
-                height: 75,
-                child: HotelSection(),
-              )
-              */
+              
+              SearchSection(),
+              //HotelSection(),
+             
+             
             ],
             
           ),
           ),
+      ),
       bottomNavigationBar: const BottomNavBarSection(),
     );
   }
