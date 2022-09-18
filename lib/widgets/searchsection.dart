@@ -10,12 +10,7 @@ class SearchSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      height: double.infinity,
-      width: double.infinity,
-      color: Colors.grey[800],
-      padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
-      child: Column(
+    return  Column(
          
         children: [
           Expanded(
@@ -24,6 +19,7 @@ class SearchSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Expanded(
+                flex: 3,
                  child: Container(
                   padding: const EdgeInsets.only(left: 5),
                   decoration: BoxDecoration(
@@ -53,8 +49,10 @@ class SearchSection extends StatelessWidget {
                 width: 10,
               ),
                Expanded(
+                flex: 1,
                 child: Container(
-                
+                 height: 50,
+                width: 50,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -104,12 +102,14 @@ class SearchSection extends StatelessWidget {
             children: <Widget>[
 
                 Expanded(
+                  flex: 1,
                        child: Container(
                 margin: const EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
+                      flex: 2,
                       child: Text(
                       'Choisissez la date',
                       style: GoogleFonts.nunito(
@@ -123,6 +123,7 @@ class SearchSection extends StatelessWidget {
                     const SizedBox(height: 8,),
 
                     Expanded(
+                      flex: 1,
                        child: Text(
                       '12 Dec - 22 Dec',
                       style: GoogleFonts.nunito(
@@ -141,12 +142,14 @@ class SearchSection extends StatelessWidget {
               
 
                Expanded(
+                flex: 1,
                        child: Container(
                 margin: const EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                    Expanded(
+                    flex: 2,
                        child: Text(
                       'Nombre de chambres',
                       style: GoogleFonts.nunito(
@@ -160,6 +163,7 @@ class SearchSection extends StatelessWidget {
                     const SizedBox(height: 8,),
 
                      Expanded(
+                      flex: 1,
                        child: Text(
                       '1 Chambre - 2 Adultes',
                       style: GoogleFonts.nunito(
@@ -179,8 +183,8 @@ class SearchSection extends StatelessWidget {
           ),
           ),
         ],
-      ),
+      );
       
-    );
+   
   }
 }

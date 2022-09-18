@@ -20,7 +20,7 @@ class HotelSection extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 30,
+            height: 50,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -54,7 +54,7 @@ class HotelSection extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 70,
+            height: 150,
             width: MediaQuery.of(context).size.width,
             child: ListView.builder(
               shrinkWrap: true,
