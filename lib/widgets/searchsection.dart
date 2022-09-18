@@ -49,7 +49,7 @@ class SearchSection extends StatelessWidget {
                 width: 10,
               ),
                Expanded(
-                flex: 1,
+                
                 child: Container(
                  height: 50,
                 width: 50,
@@ -114,7 +114,7 @@ class SearchSection extends StatelessWidget {
                       'Choisissez la date',
                       style: GoogleFonts.nunito(
                         color: Colors.grey,
-                        fontSize: 15,
+                        fontSize: 13,
                       ),
                     ),
                     ),
@@ -128,7 +128,7 @@ class SearchSection extends StatelessWidget {
                       '12 Dec - 22 Dec',
                       style: GoogleFonts.nunito(
                         color: Colors.black,
-                        fontSize: 17,
+                        fontSize: 14,
                       ),
 
                     ),
@@ -154,7 +154,7 @@ class SearchSection extends StatelessWidget {
                       'Nombre de chambres',
                       style: GoogleFonts.nunito(
                         color: Colors.grey,
-                        fontSize: 15,
+                        fontSize: 13,
                       ),
                     ),
                     ),
@@ -168,7 +168,7 @@ class SearchSection extends StatelessWidget {
                       '1 Chambre - 2 Adultes',
                       style: GoogleFonts.nunito(
                         color: Colors.black,
-                        fontSize: 15,
+                        fontSize: 14,
                       )
                     ),
                     ),

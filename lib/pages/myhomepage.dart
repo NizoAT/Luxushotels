@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: double.infinity,
               color: Colors.grey[800],
               padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
-              child: SearchSection(),
+              child: const SearchSection(),
           ),
           ) ,
           Expanded(
@@ -78,7 +78,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
-        SizedBox(
+        Flexible(
+          fit: FlexFit.loose,
+          child: SizedBox(
           height: 350,
           width: MediaQuery.of(context).size.width,
           child: ListView.builder(
@@ -103,6 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 
               );
             }
+            ),
             ),
             ),
             // Expanded(
