@@ -108,12 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ),
             ),
-            // Expanded(
-            //   child: SearchSection(),
-            // ),
-            //  Expanded(
-            //   child: HotelSection(),
-            // ),
+            
             
           ],
           

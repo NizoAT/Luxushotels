@@ -105,13 +105,13 @@ class HotelCard extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 10),
-            child: Flexible(
-            child:Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
               
-                Row(
-                  children: [
+                Flexible(
+                    child:Row(
+                    children: [
                     const Icon(
                       Icons.place,
                       color: d_green,
@@ -127,7 +127,10 @@ class HotelCard extends StatelessWidget {
                     ),
                   ],
                 ),
-               Text(
+                ),
+
+               Flexible(
+                  child:Text(
                   'per night',
                   style: GoogleFonts.nunito(
                     fontSize: 14,
@@ -135,11 +138,12 @@ class HotelCard extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
+               ),
             
               ],
             ),
             ),
-          ),
+          
           Container(
             margin: EdgeInsets.fromLTRB(10, 3, 10, 0),
             child: Row(
