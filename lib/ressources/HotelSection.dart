@@ -53,7 +53,8 @@ class HotelSection extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          Expanded(
+            child: SizedBox(
             height: 150,
             width: MediaQuery.of(context).size.width,
             child: ListView.builder(
@@ -78,6 +79,7 @@ class HotelSection extends StatelessWidget {
                   
                 );
               }
+              ),
               ),
               ),
           

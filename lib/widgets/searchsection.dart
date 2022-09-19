@@ -48,11 +48,11 @@ class SearchSection extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-               Expanded(
+               
                 
-                child: Container(
-                 height: 50,
-                width: 50,
+                Container(
+                 height: 40,
+                width: 40,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -91,7 +91,7 @@ class SearchSection extends StatelessWidget {
                   ),
                 ),
               ),
-               ),
+              
               
             ],
           ),
@@ -123,12 +123,12 @@ class SearchSection extends StatelessWidget {
                     const SizedBox(height: 8,),
 
                     Expanded(
-                      flex: 1,
+                      flex: 2,
                        child: Text(
                       '12 Dec - 22 Dec',
                       style: GoogleFonts.nunito(
                         color: Colors.black,
-                        fontSize: 14,
+                        fontSize: 13,
                       ),
 
                     ),
@@ -163,12 +163,12 @@ class SearchSection extends StatelessWidget {
                     const SizedBox(height: 8,),
 
                      Expanded(
-                      flex: 1,
+                      flex: 2,
                        child: Text(
                       '1 Chambre - 2 Adultes',
                       style: GoogleFonts.nunito(
                         color: Colors.black,
-                        fontSize: 14,
+                        fontSize: 13,
                       )
                     ),
                     ),

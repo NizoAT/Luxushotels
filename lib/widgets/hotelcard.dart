@@ -91,11 +91,8 @@ class HotelCard extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 10),
-            child: Flexible(
-            child:Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
+            child: Center(
+              child: Text(
                   hotelData.place,
                   style: GoogleFonts.nunito(
                     fontSize: 14,
@@ -103,6 +100,16 @@ class HotelCard extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
+            ),
+
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 10),
+            child: Flexible(
+            child:Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              
                 Row(
                   children: [
                     const Icon(
