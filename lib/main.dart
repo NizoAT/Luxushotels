@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/myhomepage.dart';
-
+import 'package:luxushotels/pages/calendar_page.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    const d_green =  Color(0xFF54D3C2);
+    const d_green = Color(0xFF54D3C2);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hotels Booking',
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Hotels Booking'),
+      home: const CalendarPage() //MyHomePage(title: 'Hotels Booking'),
     );
   }
 }

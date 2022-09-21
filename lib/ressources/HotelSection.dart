@@ -73,6 +73,7 @@ class HotelSection extends StatelessWidget {
                       ),
                     );
                   },
+                  
                   child: HotelCard(
                     hotelData: HotelRecipe.sample[index],
                     ),
