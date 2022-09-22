@@ -29,12 +29,12 @@ class CalendarPage extends StatelessWidget {
            ),
            
             Expanded(
-            
+            flex: 5,
             child: CalendarRange(),
             ),
            
               Expanded(
-               
+               flex: 2,
                   child: ValidateBookingSection(),
                  
            ),
@@ -142,14 +142,17 @@ class _CalendarRangeState extends State<CalendarRange> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(5),
+      
+      padding: const EdgeInsets.all(10),
       color: Colors.grey[10],
       child:  TableCalendar(
+          shouldFillViewport: true,
           lastDay: kLastDay,
           focusedDay: _focusedDay,
           selectedDayPredicate: (day) => isSameDay(_selectedDay, day),
           rangeStartDay: _rangeStart,
           rangeEndDay: _rangeEnd,
+          locale: 'fr_FR',
           calendarFormat: _calendarFormat,
           headerStyle: const HeaderStyle(
             titleCentered: true,
@@ -241,7 +244,7 @@ class ValidateBookingSection extends StatelessWidget {
             "Flexible avec les dates",
             style: TextStyle(
               color: Colors.black,
-              fontSize: 20.0,
+              fontSize: 19.0,
             ),
           ),
           onChanged: null,
@@ -250,8 +253,9 @@ class ValidateBookingSection extends StatelessWidget {
       
       Expanded(
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          width: double.infinity /2,
+          padding: const EdgeInsets.symmetric(horizontal: 50),
+          width: double.infinity,
+         
           child: ElevatedButton(
             child:  Text(
               'Appliquer',
@@ -264,7 +268,7 @@ class ValidateBookingSection extends StatelessWidget {
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor: d_green,
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(5),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0),
               ),
