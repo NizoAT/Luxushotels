@@ -4,7 +4,7 @@ import 'package:table_calendar/table_calendar.dart';
 import 'package:luxushotels/widgets/myappbar.dart';
 
 DateTime kNow = DateTime.now();
-DateTime kFirstDay = DateTime(kNow.year, kNow.month - 3, kNow.day);
+DateTime kFirstDay = DateTime(kNow.year, kNow.month - 9, kNow.day);
 DateTime kLastDay = DateTime(kNow.year, kNow.month + 3, kNow.day);
 const d_green = Color(0xFF54D3C2);
  
@@ -152,7 +152,7 @@ class _CalendarRangeState extends State<CalendarRange> {
           selectedDayPredicate: (day) => isSameDay(_selectedDay, day),
           rangeStartDay: _rangeStart,
           rangeEndDay: _rangeEnd,
-          locale: 'fr_FR',
+          //locale: 'fr_FR',
           calendarFormat: _calendarFormat,
           headerStyle: const HeaderStyle(
             titleCentered: true,
@@ -253,14 +253,15 @@ class ValidateBookingSection extends StatelessWidget {
       
       Expanded(
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 50),
+          padding: const EdgeInsets.symmetric(horizontal: 70),
+          margin: const EdgeInsets.only(bottom: 10.0),
           width: double.infinity,
          
           child: ElevatedButton(
             child:  Text(
               'Appliquer',
               style: GoogleFonts.nunito(
-                fontSize: 17,
+                fontSize: 20,
                 color: Colors.white,
                 fontWeight: FontWeight.w600,
 

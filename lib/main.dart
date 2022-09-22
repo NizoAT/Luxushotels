@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const CalendarPage() //MyHomePage(title: 'Hotels Booking'),
+      home: const MyHomePage(title: 'Hotels Booking'),
     );
   }
 }
