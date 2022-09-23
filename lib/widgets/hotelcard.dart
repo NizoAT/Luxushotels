@@ -6,7 +6,7 @@ const Color d_green = Color(0xFF54D3C2);
 class HotelCard extends StatelessWidget {
 
   final HotelRecipe hotelData;
-  const HotelCard({required this.hotelData});
+  const HotelCard({super.key, required this.hotelData});
 
    
 
@@ -14,12 +14,12 @@ class HotelCard extends StatelessWidget {
    Widget build(BuildContext context) {
     return Card(
       child: Container(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       height: 230,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(18),
         ),
         boxShadow: [
@@ -27,7 +27,7 @@ class HotelCard extends StatelessWidget {
             color: Colors.grey.shade200,
             spreadRadius: 4,
             blurRadius: 6,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
@@ -36,7 +36,7 @@ class HotelCard extends StatelessWidget {
           Container(
             height: 140,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(18),
                 topRight: Radius.circular(18),
               ),
@@ -55,9 +55,9 @@ class HotelCard extends StatelessWidget {
                   right: -15,
                   child: MaterialButton(
                     color: Colors.white,
-                    shape: CircleBorder(),
+                    shape: const CircleBorder(),
                     onPressed: () {},
-                    child: Icon(
+                    child: const Icon(
                       Icons.favorite_outline_rounded,
                       color: d_green,
                       size: 20,
@@ -145,11 +145,11 @@ class HotelCard extends StatelessWidget {
             ),
           
           Container(
-            margin: EdgeInsets.fromLTRB(10, 3, 10, 0),
+            margin: const EdgeInsets.fromLTRB(10, 3, 10, 0),
             child: Row(
               children: [
                 Row(
-                  children: [
+                  children: const [
                     Icon(
                       Icons.star_rate,
                       color: d_green,
@@ -177,7 +177,7 @@ class HotelCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 Text(
                   '${hotelData.review} reviews',
                   style: GoogleFonts.nunito(
